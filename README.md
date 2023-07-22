@@ -1,7 +1,6 @@
 ### utilities-monitor ###
 
-1) Performance testing 
-2) Functional testing  
+Performance and Functional testing for https://github.com/singeev/utilitiesMonitor project 
 
-Stack: Java, JUnit5, Maven, Gatling
-Reporting: Allure, Gatling
+* Stack: Java, JUnit5, Maven, Gatling
+* Reporting: Allure, Gatling
