@@ -1,0 +1,6 @@
+{
+  "userId": #{randomInt(1,100)},
+  "gas": #{randomDouble(01.01,100.01,2)},
+  "coldWater": #{randomDouble(01.01,100.01,2)},
+  "hotWater": #{randomDouble(01.01,100.01,2)}
+}

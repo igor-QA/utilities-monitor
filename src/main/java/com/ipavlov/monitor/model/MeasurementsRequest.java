@@ -20,6 +20,9 @@ public class MeasurementsRequest {
                 this.hotWater = hotWater;
         }
 
+        public MeasurementsRequest() {
+        }
+
         @Override
         public String toString() {
                 return "Measurements{" +

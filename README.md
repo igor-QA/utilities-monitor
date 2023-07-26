@@ -1,6 +1,21 @@
-### utilities-monitor ###
+### Utilities-monitor ###
 
 Performance and Functional testing for https://github.com/singeev/utilitiesMonitor project 
 
-* Stack: Java, JUnit5, Maven, Gatling
-* Reporting: Allure, Gatling
+* Stack: Java 17, RestAssured, JUnit5, Maven, Gatling
+* Reporting: Allure Reports, Gatling Reports
+
+
+### Functional: ###
+* mvn clean test /*functional*/ test
+* mvn allure:report
+* mvn allure:serve
+
+### Performance: ###
+
+* mvn gatling:test
+
+
+
+
+
