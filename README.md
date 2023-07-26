@@ -7,7 +7,7 @@ Performance and Functional testing for https://github.com/singeev/utilitiesMonit
 
 
 ### Functional: ###
-* mvn clean test /*functional*/ test
+* mvn clean -Dtest=*/functional/* test
 * mvn allure:report
 * mvn allure:serve
 
