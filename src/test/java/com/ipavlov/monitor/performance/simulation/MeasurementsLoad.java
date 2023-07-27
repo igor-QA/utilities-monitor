@@ -14,9 +14,9 @@ import static io.gatling.javaapi.http.HttpDsl.http;
 
 public class MeasurementsLoad extends Simulation {
 
-    private static final int USER_COUNT = Integer.parseInt(System.getProperty("USERS", "5"));
+    private static final int USER_COUNT = Integer.parseInt(System.getProperty("USERS", "15"));
     private static final Duration RAMP_DURATION =
-            Duration.ofSeconds(Integer.parseInt(System.getProperty("RAMP_DURATION", "10")));
+            Duration.ofSeconds(Integer.parseInt(System.getProperty("RAMP_DURATION", "30")));
 
     @Override
     public void before() {

@@ -57,9 +57,3 @@ mvn gatling:test
 <img width="80%" title="Gatling overview" src="images/gatling2.png">
 </code>
 </p>
-
-
-
-
-
-
