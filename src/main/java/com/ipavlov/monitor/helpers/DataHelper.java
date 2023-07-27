@@ -25,11 +25,11 @@ public class DataHelper {
     }
 
     public static double getRandomDouble() {
-        return faker.number().randomDouble(2, 1, 100);
+        return faker.number().randomDouble(2, 1, 999);
 
     }
     public static double getRandomDoubleV2(int integerLength, int decimalLength) {
-        return faker.number().randomDouble(2, 1,100);
+        return faker.number().randomDouble(2, 1,999);
 
     }
 }

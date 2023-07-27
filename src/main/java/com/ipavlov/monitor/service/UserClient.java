@@ -20,14 +20,21 @@ public class UserClient {
                 .then().extract().response().as(MeasurementsResponse.class);
     }
 
+    @Step("Save new measurements With incorrect Data for particular user")
+    public Response createIncorrectMeasurements(MeasurementsRequest measurementsRequest) {
+        return given(RequestSpec.spec())
+                .body(measurementsRequest)
+                .log().ifValidationFails(LogDetail.ALL, true)
+                .post("/measurements")
+                .then().extract().response();
+    }
+
     @Step("Get particular user's measurement history")
     public Response getMeasurement(Integer userId) {
-        Response response = given(RequestSpec.spec())
+        return given(RequestSpec.spec())
                 .pathParam("userId", userId)
                 .log().ifValidationFails(LogDetail.ALL, true)
                 .get(ConfigHelper.getMeasurement())
                 .then().extract().response();
-        Integer userIdResponse = response.jsonPath().getInt("userId");
-        return response;
     }
 }

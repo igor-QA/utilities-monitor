@@ -36,6 +36,13 @@ mvn gatling:test
 </code>
 </p>
 
+> Failed test report on Allure
+<p  align="left">
+<code>
+<img width="80%" title="Allure overview" src="images/allure3.png">
+</code>
+</p>
+
 ## Gatling Report
 > Dashboard of load testing results
 <p  align="left">
@@ -44,7 +51,7 @@ mvn gatling:test
 </code>
 </p>
 
-> Activite users graph
+> Activity users graph
 <p  align="left">
 <code>
 <img width="80%" title="Gatling overview" src="images/gatling1.png">
