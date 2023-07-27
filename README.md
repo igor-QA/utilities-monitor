@@ -10,12 +10,14 @@ Before running the tests, launch the Application - utilitiesMonitor according to
 ## USAGE examples
 
 ## if Functional Tests: 
+#### run command
 
 ```bash
 mvn clean -Dtest=MeasurementsNegativeTests,MeasurementsPositiveTests test
 ```
 
-## Reports: 
+## Reports:
+#### run command
 
 ```bash
 mvn allure:report
@@ -23,6 +25,7 @@ mvn allure:serve
 ```
 
 ## if Performance Tests:
+#### run command
 
 ```bash
 mvn gatling:test
