@@ -37,21 +37,21 @@ mvn gatling:test
 </p>
 
 ## Gatling Report
-> Dashboard and a graph of load testing results
+> Dashboard of load testing results
 <p  align="left">
 <code>
 <img width="80%" title="Gatling overview" src="images/gatling.png">
 </code>
 </p>
 
-> Response Time
+> Activite users graph
 <p  align="left">
 <code>
 <img width="80%" title="Gatling overview" src="images/gatling1.png">
 </code>
 </p>
 
-> Request Time 
+> Number of request and response per seconds
 <p  align="left">
 <code>
 <img width="80%" title="Gatling overview" src="images/gatling2.png">
