@@ -7,30 +7,28 @@ Before running the tests, launch the Application - utilitiesMonitor according to
 - Stack: Java 17, RestAssured, JUnit5, Maven, Gatling
 - Reporting: Allure Reports, Gatling Reports
 
-# USAGE examples
+## USAGE examples
 
-### For run tests need
-
-# if Functional Tests: 
+## if Functional Tests: 
 
 ```bash
 mvn clean -Dtest=*/functional/* test
 ```
 
-# Reports: 
+## Reports: 
 
 ```bash
 mvn allure:report
 mvn allure:serve
 ```
 
-# if Performance Tests:
+## if Performance Tests:
 
 ```bash
 mvn gatling:test
 ```
 
-# Allure Reports
+## Allure Reports
 > Dashboard with statuses of testcases on Allure
 <p  align="left">
 <code>
@@ -38,25 +36,25 @@ mvn gatling:test
 </code>
 </p>
 
-# Gatling Report
+## Gatling Report
 > Dashboard and a graph of load testing results
 <p  align="left">
 <code>
-<img width="80%" title="Allure overview" src="images/gatling.png">
+<img width="80%" title="Gatling overview" src="images/gatling.png">
 </code>
 </p>
 
 > Response Time
 <p  align="left">
 <code>
-<img width="80%" title="Allure overview" src="images/gatling1.png">
+<img width="80%" title="Gatling overview" src="images/gatling1.png">
 </code>
 </p>
 
 > Request Time 
 <p  align="left">
 <code>
-<img width="80%" title="Allure overview" src="images/gatling2.png">
+<img width="80%" title="Gatling overview" src="images/gatling2.png">
 </code>
 </p>
 
