@@ -12,7 +12,7 @@ Before running the tests, launch the Application - utilitiesMonitor according to
 ## if Functional Tests: 
 
 ```bash
-mvn clean -Dtest=*/functional/* test
+mvn clean -Dtest=MeasurementsNegativeTests,MeasurementsPositiveTests test
 ```
 
 ## Reports: 
