@@ -1,19 +1,65 @@
-### Utilities-monitor ###
+# Utilities-monitor
 
-Performance and Functional testing for https://github.com/singeev/utilitiesMonitor project 
+Performance and Functional testing for https://github.com/singeev/utilitiesMonitor project.
 
-* Stack: Java 17, RestAssured, JUnit5, Maven, Gatling
-* Reporting: Allure Reports, Gatling Reports
+Before running the tests, launch the Application - utilitiesMonitor according to the instructions in the project description
 
+- Stack: Java 17, RestAssured, JUnit5, Maven, Gatling
+- Reporting: Allure Reports, Gatling Reports
 
-### Functional: ###
-* mvn clean -Dtest=*/functional/* test
-* mvn allure:report
-* mvn allure:serve
+# USAGE examples
 
-### Performance: ###
+### For run tests need
 
-* mvn gatling:test
+# if Functional Tests: 
+
+```bash
+mvn clean -Dtest=*/functional/* test
+```
+
+# Reports: 
+
+```bash
+mvn allure:report
+mvn allure:serve
+```
+
+# if Performance Tests:
+
+```bash
+mvn gatling:test
+```
+
+# Allure Reports
+> Dashboard with statuses of testcases on Allure
+<p  align="left">
+<code>
+<img width="80%" title="Allure overview" src="images/allure.png">
+</code>
+</p>
+
+# Gatling Report
+> Dashboard and a graph of load testing results
+<p  align="left">
+<code>
+<img width="80%" title="Allure overview" src="images/gatling.png">
+</code>
+</p>
+
+> Response Time
+<p  align="left">
+<code>
+<img width="80%" title="Allure overview" src="images/gatling1.png">
+</code>
+</p>
+
+> Request Time 
+<p  align="left">
+<code>
+<img width="80%" title="Allure overview" src="images/gatling2.png">
+</code>
+</p>
+
 
 
 
