@@ -25,5 +25,4 @@ public class MeasurementsResponse {
                 ", dateTime='" + dateTime + '\'' +
                 '}';
     }
-
 }

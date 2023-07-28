@@ -7,7 +7,6 @@ import com.ipavlov.monitor.service.UserClient;
 
 import static com.ipavlov.monitor.generator.MeasurementsGenerator.measurementsGenerator;
 public class BaseApiTest {
-    protected static final String ID_REGEXP = "[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}";
     protected UserClient client = new UserClient();
     protected MeasurementsRequest request = measurementsGenerator();
     protected MeasurementsResponse measurementsResponse = new MeasurementsResponse();

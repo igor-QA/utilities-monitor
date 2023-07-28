@@ -14,7 +14,7 @@ public class Steps {
                     .check(jmesPath("userId").saveAs("userId")));
 
     public ChainBuilder getUsersMeasurement =
-            exec(HttpDsl.http("Get particular user's measurement")
+            exec(HttpDsl.http("Get particular user's measurements")
                     .get("/users/#{userId}/measurements")
                     .check(HttpDsl.status().is(200)));
 }

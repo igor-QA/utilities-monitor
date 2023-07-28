@@ -5,10 +5,8 @@ import com.ipavlov.monitor.performance.scenario.Scenario;
 import io.gatling.javaapi.core.CoreDsl;
 import io.gatling.javaapi.core.Simulation;
 import io.gatling.javaapi.http.HttpProtocolBuilder;
-
 import java.time.Duration;
 
-import static io.gatling.javaapi.core.CoreDsl.forAll;
 import static io.gatling.javaapi.core.CoreDsl.global;
 import static io.gatling.javaapi.http.HttpDsl.http;
 
@@ -22,7 +20,6 @@ public class MeasurementsLoad extends Simulation {
     public void before() {
         System.out.printf("Running test with %d users%n", USER_COUNT);
         System.out.printf("Ramping users over %d seconds%n", RAMP_DURATION.getSeconds());
-
     }
 
     @Override
@@ -43,6 +40,5 @@ public class MeasurementsLoad extends Simulation {
                 .assertions(
                         global().successfulRequests().percent().gte(99.0),
                         global().responseTime().max().lt(1000));
-
     }
 }

@@ -11,7 +11,7 @@ import static org.assertj.core.api.Assertions.assertThat;
 public class MeasurementsPositiveTests extends BaseApiTest {
     private Response response;
 
-    @Description("Test to check the saving && getting of new measurements")
+    @Description("Test for check the saving && getting of new measurements")
     @RepeatedTest(5)
     public void saveAndGetMeasurementsTest() {
 
@@ -27,7 +27,7 @@ public class MeasurementsPositiveTests extends BaseApiTest {
         step("Get particular user's measurement", () ->
                 response = client.getMeasurement(measurementsResponse.getUserId()));
 
-        step("Check getting user measurement", () -> {
+        step("Check getting user measurements", () -> {
             assertThat(response.getBody()).isNotNull();
             assertThat(response.getStatusCode()).isEqualTo(200);
             assertThat(response.jsonPath().get("userId").toString()).isNotNull();

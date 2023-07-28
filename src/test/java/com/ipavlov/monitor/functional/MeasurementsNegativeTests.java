@@ -16,7 +16,7 @@ public class MeasurementsNegativeTests extends BaseApiTest {
 
     //TODO Need Exceptions : "userId": "UserId should be positive"
     @ValueSource(strings = {"measurements.json"})
-    @Description("Test to check the saving && getting of new measurements where UserId {-1}")
+    @Description("Test for check the saving && getting of new measurements where UserId {-1}")
     @ParameterizedTest(name = "Test")
     public void saveAndGetMeasurementsWhereUserIdIsMinusTest() {
 
@@ -29,7 +29,7 @@ public class MeasurementsNegativeTests extends BaseApiTest {
     }
 
     //TODO Need normal error then Measurements > 1000.01
-    @Description("Test to check the saving && getting of new measurements where HotWater {1000.01}")
+    @Description("Test for check the saving && getting of new measurements where HotWater {1000.01}")
     @Test
     public void saveAndGetMeasurementsWhereHotWaterMoreThanMaxTest() {
 
@@ -42,7 +42,7 @@ public class MeasurementsNegativeTests extends BaseApiTest {
         });
     }
 
-    @Description("Test to check the saving && getting of new measurements where Gas {is Null}")
+    @Description("Test for check the saving && getting of new measurements where Gas {is Null}")
     @Test
     public void saveAndGetMeasurementsWhereGasIsNullTest() {
 

@@ -30,6 +30,7 @@
         <slf4j.version>2.0.5</slf4j.version>
         <hamcrest.version>1.3</hamcrest.version>
         <gatling-maven-plugin.version>4.3.7</gatling-maven-plugin.version>
+        <picatinny.version>0.14.0</picatinny.version>
     </properties>
 
     <dependencies>
@@ -102,7 +103,7 @@
         <dependency>
             <groupId>ru.tinkoff</groupId>
             <artifactId>gatling-picatinny_2.13</artifactId>
-            <version>0.14.0</version>
+            <version>${picatinny.version}</version>
         </dependency>
         <dependency>
             <groupId>io.gatling.highcharts</groupId>

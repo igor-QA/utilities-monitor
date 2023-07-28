@@ -15,6 +15,5 @@ public class ConfigHelper {
 
     public static String getMeasurement() {
         return request.getMeasurement();
-
     }
 }
