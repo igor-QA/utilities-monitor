@@ -1,6 +1,6 @@
 # Utilities-monitor
 
-Performance and Functional testing for https://github.com/singeev/utilitiesMonitor project.
+**Performance** and **Functional** testing for https://github.com/singeev/utilitiesMonitor project.
 
 Before running the tests, launch the Application - utilitiesMonitor according to the instructions in the project description
 
