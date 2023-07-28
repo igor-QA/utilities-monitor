@@ -39,7 +39,7 @@ mvn gatling:test
 </code>
 </p>
 
-> Failed test report on Allure
+> Allure report with failed tests
 <p  align="left">
 <code>
 <img width="80%" title="Allure overview" src="images/allure3.png">
