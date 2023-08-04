@@ -4,8 +4,13 @@
 
 Before running the tests, launch the Application - utilitiesMonitor according to the instructions in the project description
 
-- Stack: Java 17, RestAssured, JUnit5, Maven, Gatling
-- Reporting: Allure Reports, Gatling Reports
+- Stack: Java 17, RestAssured, JUnit5, Maven, Gatling, JMeter
+- Reporting: Allure Reports, Gatling Reports, Grafana
+
+For Grafana reporting install it:  
+
+- [Grafana](https://grafana.com/grafana/download)
+- [InfluxDB](https://portal.influxdata.com/downloads/) 
 
 ## USAGE examples
 
