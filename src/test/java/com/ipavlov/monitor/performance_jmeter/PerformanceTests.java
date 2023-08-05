@@ -10,6 +10,7 @@ import us.abstracta.jmeter.javadsl.core.TestPlanStats;
 import java.io.IOException;
 import java.time.Duration;
 
+import static com.ipavlov.monitor.performance_jmeter.logger.TestExecutionLogger.sentInfluxDbListener;
 import static com.ipavlov.monitor.performance_jmeter.variables.RequestBodyGenerator.buildRequestBody;
 import static org.assertj.core.api.Assertions.assertThat;
 import static us.abstracta.jmeter.javadsl.JmeterDsl.*;
@@ -27,13 +28,8 @@ public class PerformanceTests extends BaseLoadTest {
                                         jsonExtractor("userIdVar", "userId")),
                         httpSampler(ConfigHelper.url() + "/users/${userIdVar}/measurements")
                                 .method(HTTPConstants.GET)
-                                .children(
-                                        responseAssertion().containsSubstrings("userId"))
-                ),
-                influxDbListener("http://localhost:8086/write?db=jmeter")
-                        .measurement("jmeter")
-                        .application("jmeter")
-                        .token(ConfigHelper.getToken())
+                                .children(responseAssertion().containsSubstrings("userId"))
+                ), sentInfluxDbListener()
         ).run();
         assertThat(stats.overall().sampleTimePercentile99()).isLessThan(Duration.ofSeconds(5));
     }
