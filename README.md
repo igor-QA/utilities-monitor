@@ -14,7 +14,7 @@ For Grafana reporting install it:
 
 ## USAGE examples
 
-## if Functional Tests: 
+## Functional Tests: 
 #### run command
 
 ```bash
@@ -29,12 +29,26 @@ mvn allure:report
 mvn allure:serve
 ```
 
-## if Performance Tests:
+## Performance Tests (Gatling-Java-Dsl):
 #### run command
 
 ```bash
 mvn gatling:test
 ```
+
+## Performance Tests (JMeter-Java-Dsl):
+#### run command
+
+```bash
+mvn clean -Dtest=PerformanceTests test
+```
+## Grafana
+> Real-time monitoring for tests
+> <p  align="left">
+<code>
+<img width="80%" title="Grafana monitoring" src="images/grafana.png">
+</code>
+</p>
 
 ## Allure Reports
 > Dashboard with statuses of testcases on Allure
