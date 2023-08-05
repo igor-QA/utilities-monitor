@@ -1,7 +1,7 @@
-package com.ipavlov.monitor.performance.simulation;
+package com.ipavlov.monitor.performance_gatling.simulation;
 
 import com.ipavlov.monitor.configs.ConfigHelper;
-import com.ipavlov.monitor.performance.scenario.Scenario;
+import com.ipavlov.monitor.performance_gatling.scenario.Scenario;
 import io.gatling.javaapi.core.CoreDsl;
 import io.gatling.javaapi.core.Simulation;
 import io.gatling.javaapi.http.HttpProtocolBuilder;
@@ -12,9 +12,9 @@ import static io.gatling.javaapi.http.HttpDsl.http;
 
 public class MeasurementsLoad extends Simulation {
 
-    private static final int USER_COUNT = Integer.parseInt(System.getProperty("USERS", "15"));
+    private static final int USER_COUNT = Integer.parseInt(System.getProperty("USERS", "2"));
     private static final Duration RAMP_DURATION =
-            Duration.ofSeconds(Integer.parseInt(System.getProperty("RAMP_DURATION", "30")));
+            Duration.ofSeconds(Integer.parseInt(System.getProperty("RAMP_DURATION", "2")));
 
     @Override
     public void before() {

@@ -1,4 +1,4 @@
-package com.ipavlov.monitor.performance.steps;
+package com.ipavlov.monitor.performance_gatling.steps;
 
 import io.gatling.javaapi.core.ChainBuilder;
 import io.gatling.javaapi.http.HttpDsl;

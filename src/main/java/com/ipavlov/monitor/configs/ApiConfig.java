@@ -15,4 +15,6 @@ import org.aeonbits.owner.Config;
         String port();
         @Key("getMeasurement")
         String getMeasurement();
+        @Key("token")
+        String getToken();
 }

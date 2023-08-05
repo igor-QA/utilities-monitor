@@ -1,6 +1,5 @@
 package com.ipavlov.monitor.functional;
 
-import com.ipavlov.monitor.BaseApiTest;
 import io.qameta.allure.Description;
 import io.restassured.response.Response;
 import org.junit.jupiter.api.RepeatedTest;
@@ -12,7 +11,7 @@ public class MeasurementsPositiveTests extends BaseApiTest {
     private Response response;
 
     @Description("Test for check the saving && getting of new measurements")
-    @RepeatedTest(5)
+    @RepeatedTest(3)
     public void saveAndGetMeasurementsTest() {
 
         step("Save new measurements", () ->

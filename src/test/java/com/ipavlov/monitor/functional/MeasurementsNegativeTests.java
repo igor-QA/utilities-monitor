@@ -1,6 +1,5 @@
 package com.ipavlov.monitor.functional;
 
-import com.ipavlov.monitor.BaseApiTest;
 import com.ipavlov.monitor.model.MeasurementsRequest;
 import io.qameta.allure.Description;
 import io.restassured.response.Response;

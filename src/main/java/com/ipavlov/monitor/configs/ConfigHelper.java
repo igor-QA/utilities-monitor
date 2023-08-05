@@ -8,12 +8,11 @@ public class ConfigHelper {
     private final static ApiConfig request = ConfigFactory
             .create(ApiConfig.class, System.getProperties());
 
-
     public static String url() {
         return api.host() + ":" + api.port();
     }
 
-    public static String getMeasurement() {
-        return request.getMeasurement();
-    }
+    public static String getMeasurement() {return request.getMeasurement();}
+
+    public static String getToken() {return api.getToken();}
 }
