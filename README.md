@@ -15,6 +15,12 @@ For Grafana reporting install it:
 ## USAGE examples
 
 ## Functional Tests: 
+
+### need go to module and run test
+
+```bash
+cd functional
+```
 #### run command
 
 ```bash
@@ -30,6 +36,12 @@ mvn allure:serve
 ```
 
 ## Performance Tests (Gatling-Java-Dsl):
+
+### need go to module and run test
+
+```bash
+cd gatling
+```
 #### run command
 
 ```bash
@@ -37,6 +49,12 @@ mvn gatling:test
 ```
 
 ## Performance Tests (JMeter-Java-Dsl):
+
+### need go to module and run test
+
+```bash
+cd jmeter
+```
 #### run command
 
 ```bash
