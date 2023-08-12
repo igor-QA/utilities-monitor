@@ -5,10 +5,11 @@ import com.ipavlov.monitor.scenario.Scenario;
 import io.gatling.javaapi.core.CoreDsl;
 import io.gatling.javaapi.core.Simulation;
 import io.gatling.javaapi.http.HttpProtocolBuilder;
+
 import java.time.Duration;
 
-import static io.gatling.javaapi.core.CoreDsl.global;
 import static io.gatling.javaapi.http.HttpDsl.http;
+import static ru.tinkoff.gatling.javaapi.Assertions.assertionFromYaml;
 
 public class MeasurementsLoad extends Simulation {
 
@@ -37,8 +38,6 @@ public class MeasurementsLoad extends Simulation {
                         CoreDsl.constantUsersPerSec(USER_COUNT).during(RAMP_DURATION).randomized()
                 )
         ).protocols(httpProtocol)
-                .assertions(
-                        global().successfulRequests().percent().gte(99.0),
-                        global().responseTime().max().lt(1000));
+                .assertions(assertionFromYaml("src/test/resources/assertions.yml"));
     }
 }
