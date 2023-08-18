@@ -1,17 +1,20 @@
 package com.ipavlov.monitor.variables;
 
-import com.ipavlov.monitor.helpers.DataHelper;
+import groovy.json.JsonException;
 import net.minidev.json.JSONObject;
+
+import static com.ipavlov.monitor.helpers.DataHelper.getRandomDouble;
+import static com.ipavlov.monitor.helpers.DataHelper.getRandomInteger;
 
 public class RequestBodyGenerator {
 
     //Generation random Json
-    public static String buildRequestBody() {
+    public static String buildRequestBody() throws JsonException {
         JSONObject jsonObject = new JSONObject();
-        jsonObject.appendField("userId", DataHelper.getRandomInteger());
-        jsonObject.appendField("gas", DataHelper.getRandomDouble());
-        jsonObject.appendField("coldWater", DataHelper.getRandomDouble());
-        jsonObject.appendField("hotWater", DataHelper.getRandomDouble());
+        jsonObject.put("userId", getRandomInteger());
+        jsonObject.put("gas", getRandomDouble());
+        jsonObject.put("coldWater", getRandomDouble());
+        jsonObject.put("hotWater", getRandomDouble());
         return jsonObject.toJSONString();
     }
 

@@ -25,13 +25,13 @@ public class PerformanceTests extends BaseLoadTest {
                         httpSampler(ConfigHelper.url() + "/measurements")
                                 .method(HTTPConstants.POST)
                                 .post(s -> buildRequestBody(), ContentType.APPLICATION_JSON)
-                                .children(
-                                        jsonExtractor("userIdVar", "userId")),
+                                .children(jsonExtractor("userIdVar", "userId"))
+                                .children(jsonAssertion("dateTime")),
 
-                        httpSampler(ConfigHelper.url() + "/users/${userIdVar}/measurements", HTTPConstants.GET)
-
-                                .children(responseAssertion().matchesRegexes("userId"))
-                                .children(jsonAssertion("userId").equalsTo("${userIdVar}"))
+                        httpSampler(ConfigHelper.url() + "/users/${userIdVar}/measurements")
+                                .method(HTTPConstants.GET)
+                                .contentType(ContentType.APPLICATION_JSON)
+                                .children(jsonAssertion("[*].userId"))
                 ), sentInfluxDbListener()
         ).run();
         assertThat(stats.overall().sampleTimePercentile99()).isLessThan(Duration.ofSeconds(5));

@@ -38,6 +38,7 @@ public class MeasurementsLoad extends Simulation {
                         CoreDsl.constantUsersPerSec(USER_COUNT).during(RAMP_DURATION).randomized()
                 )
         ).protocols(httpProtocol)
-                .assertions(assertionFromYaml("src/test/resources/assertions.yml"));
+                .assertions(assertionFromYaml
+                        ("gatling/src/test/resources/nfr.yml"));
     }
 }

@@ -16,7 +16,7 @@
         <gatling-maven-plugin.version>4.3.7</gatling-maven-plugin.version>
         <picatinny.version>0.14.0</picatinny.version>
         <logback.version>1.4.7</logback.version>
-        <slf4j.version>2.0.5</slf4j.version>
+        <slf4j.version>2.0.7</slf4j.version>
     </properties>
     <dependencies>
         <dependency>
